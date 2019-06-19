@@ -5,8 +5,9 @@
 # ....
 # e.g. 6th fibonacci number is 8
 
-# Time complexity: ?
-# Space complexity: ?
+# Time complexity: O(n) because creating an array of n elements, constant array[0] look up time
+# Space complexity: O(n) because creating an array of n elements
+
 def fibonacci(n)
-  raise NotImplementedError
+  (0..n).inject([1, 0]) { |(a, b), _| [b, a + b] }[0]
 end
