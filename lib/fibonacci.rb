@@ -11,3 +11,10 @@
 def fibonacci(n)
   (0..n).inject([1, 0]) { |(a, b), _| [b, a + b] }[0]
 end
+
+# With recursion
+# def fibonacci(n)
+#   raise ArgumentError if !n || n < 0
+#   return n if n < 2
+#   return (fibonacci(n - 1) + fibonacci(n - 2))
+# end
